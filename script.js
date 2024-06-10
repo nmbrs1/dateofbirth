@@ -76,5 +76,5 @@ function changeContent2() {
       setTimeout(() => {
         fadeInBackground();
         startFallingDecorations(); // Start falling decorations after background expands
-      }, 13000); // Adjust delay after showing IP
+      }, 15000); // Adjust delay after showing IP
     }
