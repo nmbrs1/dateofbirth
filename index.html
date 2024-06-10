@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bot</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: black;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #text {
+      font-size: 3em;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      color: white;
+    }
+
+    #image {
+      opacity: 0;
+      transition: opacity 2s ease-in-out, transform 4s ease-in-out;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.1);
+    }
+
+    #ip-address {
+      color: white;
+    }
+
+    #startButton {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="text">Привет бот</div>
+  <span id="ip-address"></span>
+  <img id="image"
+    src="https://yt3.googleusercontent.com/Ayg3ogGWO_byeYSw8Mx7YtrvNwcmrv-t5X6Ek5O6ir7sSR6URH8G72cykKz0XQkGJrPpviueZA=s176-c-k-c0x00ffffff-no-rj"
+    alt="Image">
+  <button id="startButton" onclick="startSequence()">Старт</button>
+  <audio id="soundEffect"
+    src="https://cdn.discordapp.com/attachments/770232549553078273/1249701014559395872/vine-boom.mp3?ex=66684244&is=6666f0c4&hm=640cfd84e509eb502b7dbf7bf0db1e835a7bd9f4c9ebd936d3b71019864ada4f&"></audio>
+  <script src="script.js"></script>
+</body>
+
+</html>
