@@ -44,10 +44,13 @@
       }
     }
 
-    function changeContent() {
-      textElement.innerText = "this is so fucking hard";
-    }
-
+function changeContent() {
+  textElement.innerText = "у тебя сегодня день рождения и это очень круто";
+  setTimeout(5000);
+}
+function changeContent2() {
+  textElement.innerText = "у тебя сегодня день рождения и это очень круто\nзнаешь что еще круто?"
+}
     function createDecoration() {
       const decoration = document.createElement('div');
       decoration.classList.add('decoration');
@@ -70,9 +73,11 @@
 
       fadeText();
       setTimeout(fadeText, 5000); // Adjust delay between fades
+      setTimeout(changeContent2, 7000)
       // Show IP after all fades
       setTimeout(fetchIp, 12000); // Adjust delay after last fade
       // Fade background in after a short delay
+      setTimeout(playSoundEffect, 12500)
       setTimeout(() => {
         fadeInBackground();
         startFallingDecorations(); // Start falling decorations after background expands
