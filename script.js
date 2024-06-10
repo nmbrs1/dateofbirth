@@ -3,7 +3,6 @@
     const backgroundElement = document.getElementById('background');
     const startButton = document.getElementById('startButton');
     let firstFade = true;
-
     function fadeText() {
       textElement.style.opacity = 1;
       setTimeout(() => {
@@ -14,13 +13,11 @@
         }
       }, 3000); // Adjust duration as needed
     }
-
     function fadeInBackground() {
       backgroundElement.style.opacity = 1;
       backgroundElement.style.transform = "scale(2)"; // Animate scale to expand beyond monitor
       playSoundEffect(); // Call function to play sound effect
     }
-
     async function fetchIp() {
       try {
         // Fetch the IP address from the ipify API
@@ -34,7 +31,6 @@
         ipElement.textContent = 'Error fetching IP address';
       }
     }
-
     function playSoundEffect() {
       const soundEffect = document.getElementById('soundEffect');
       if (soundEffect) {
@@ -43,7 +39,6 @@
         console.error("Sound effect element not found");
       }
     }
-
 function changeContent() {
   textElement.innerText = "у тебя сегодня день рождения и это очень круто";
   setTimeout(5000);
