@@ -2,6 +2,7 @@
     const ipElement = document.getElementById('ip-address');
     const backgroundElement = document.getElementById('background');
     const startButton = document.getElementById('startButton');
+    const w = document.getElementById('w');
     let firstFade = true;
 
     function fadeText() {
@@ -30,7 +31,7 @@
         ipElement.textContent = data.ip;
       } catch (error) {
         console.error('Error fetching IP address:', error);
-        ipElement.textContent = 'Error fetching IP address';
+        location.reload();
       }
     }
 
@@ -43,10 +44,13 @@
       }
     }
 
-    function changeContent() {
-      textElement.innerText = "this is so fucking hard";
-    }
-
+function changeContent() {
+  textElement.innerText = "у тебя сегодня день рождения и это очень круто";
+  setTimeout(5000);
+}
+function changeContent2() {
+  textElement.innerText = "у тебя сегодня день рождения и это очень круто\nзнаешь что еще круто?"
+}
     function createDecoration() {
       const decoration = document.createElement('div');
       decoration.classList.add('decoration');
@@ -66,10 +70,12 @@
     function startSequence() {
       // Hide the start button
       startButton.style.display = 'none';
+      w.innerText = "";
 
       fadeText();
       setTimeout(fadeText, 5000); // Adjust delay between fades
       // Show IP after all fades
+      setTimeout(changeContent2, 7000)
       setTimeout(fetchIp, 12000); // Adjust delay after last fade
       // Fade background in after a short delay
       setTimeout(playSoundEffect,12200);
