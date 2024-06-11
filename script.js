@@ -16,7 +16,6 @@
     function fadeInBackground() {
       backgroundElement.style.opacity = 1;
       backgroundElement.style.transform = "scale(2)"; // Animate scale to expand beyond monitor
-      playSoundEffect(); // Call function to play sound effect
     }
     async function fetchIp() {
       try {
@@ -44,7 +43,7 @@ function changeContent() {
   setTimeout(5000);
 }
 function changeContent2() {
-  textElement.innerText = "у тебя сегодня день рождения и это очень круто\nзнаешь что еще круто?"
+  textElement.innerText = "у тебя сегодня день рождения и это очень круто\n             знаешь что еще круто?"
 }
     function createDecoration() {
       const decoration = document.createElement('div');
