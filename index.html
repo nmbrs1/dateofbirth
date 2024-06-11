@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fading Text and Image</title>
+  <title>bont</title>
   <style>
     body {
       font-family: sans-serif;
@@ -42,7 +42,7 @@
     }
 
     #ip-address {
-      color: black;
+      color: white;
       z-index: 2;
     }
 
@@ -138,18 +138,24 @@
         transform: translateY(100vh);
       }
     }
+    #w {
+      color: white;
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+    }
   </style>
 </head>
 
 <body>
-  <div id="text">a</div>
-  <span id="ip-address">Loading...</span>
+  <div id="text">Привет бот</div>
+  <div id="w">(для недоразумных, нажми на подарок)</div>
+  <span id="ip-address"></span>
   <div id="background"></div>
   <button id="startButton" onclick="startSequence()">
     <div class="ribbon-vertical"></div>
     <div class="ribbon-horizontal"></div>
     <div class="bow"></div>
-    Start
   </button>
   <audio id="soundEffect" src="https://cdn.discordapp.com/attachments/770232549553078273/1249701014559395872/vine-boom.mp3?ex=66684244&is=6666f0c4&hm=640cfd84e509eb502b7dbf7bf0db1e835a7bd9f4c9ebd936d3b71019864ada4f&"></audio>
 
