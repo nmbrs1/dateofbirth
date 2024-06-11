@@ -43,7 +43,7 @@ function changeContent() {
   setTimeout(5000);
 }
 function changeContent2() {
-  textElement.innerText = "у тебя сегодня день рождения и это очень круто\n ㅤㅤ      знаешь что еще круто?"
+  textElement.innerText = "у тебя сегодня день рождения и это очень круто\n ㅤㅤㅤㅤㅤㅤㅤㅤзнаешь что еще круто?"
 }
     function createDecoration() {
       const decoration = document.createElement('div');
