@@ -3,6 +3,7 @@
     const backgroundElement = document.getElementById('background');
     const startButton = document.getElementById('startButton');
     let firstFade = true;
+
     function fadeText() {
       textElement.style.opacity = 1;
       setTimeout(() => {
@@ -13,10 +14,13 @@
         }
       }, 3000); // Adjust duration as needed
     }
+
     function fadeInBackground() {
       backgroundElement.style.opacity = 1;
       backgroundElement.style.transform = "scale(2)"; // Animate scale to expand beyond monitor
+      playSoundEffect(); // Call function to play sound effect
     }
+
     async function fetchIp() {
       try {
         // Fetch the IP address from the ipify API
@@ -30,6 +34,7 @@
         ipElement.textContent = 'Error fetching IP address';
       }
     }
+
     function playSoundEffect() {
       const soundEffect = document.getElementById('soundEffect');
       if (soundEffect) {
@@ -38,13 +43,11 @@
         console.error("Sound effect element not found");
       }
     }
-function changeContent() {
-  textElement.innerText = "у тебя сегодня день рождения и это очень круто";
-  setTimeout(5000);
-}
-function changeContent2() {
-  textElement.innerText = "у тебя сегодня день рождения и это очень круто\nзнаешь что еще круто?"
-}
+
+    function changeContent() {
+      textElement.innerText = "this is so fucking hard";
+    }
+
     function createDecoration() {
       const decoration = document.createElement('div');
       decoration.classList.add('decoration');
@@ -67,13 +70,11 @@ function changeContent2() {
 
       fadeText();
       setTimeout(fadeText, 5000); // Adjust delay between fades
-      setTimeout(changeContent2, 7000)
       // Show IP after all fades
       setTimeout(fetchIp, 12000); // Adjust delay after last fade
       // Fade background in after a short delay
-      setTimeout(playSoundEffect, 12200)
       setTimeout(() => {
         fadeInBackground();
         startFallingDecorations(); // Start falling decorations after background expands
-      }, 14500); // Adjust delay after showing IP
+      }, 14000); // Adjust delay after showing IP
     }
