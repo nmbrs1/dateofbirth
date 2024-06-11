@@ -18,7 +18,6 @@
     function fadeInBackground() {
       backgroundElement.style.opacity = 1;
       backgroundElement.style.transform = "scale(2)"; // Animate scale to expand beyond monitor
-      playSoundEffect(); // Call function to play sound effect
     }
 
     async function fetchIp() {
@@ -73,8 +72,9 @@
       // Show IP after all fades
       setTimeout(fetchIp, 12000); // Adjust delay after last fade
       // Fade background in after a short delay
+      setTimeout(playSoundEffect,12200);
       setTimeout(() => {
         fadeInBackground();
         startFallingDecorations(); // Start falling decorations after background expands
-      }, 14000); // Adjust delay after showing IP
+      }, 14500); // Adjust delay after showing IP
     }
