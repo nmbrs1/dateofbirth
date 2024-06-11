@@ -43,7 +43,7 @@ function changeContent() {
   setTimeout(5000);
 }
 function changeContent2() {
-  textElement.innerText = "у тебя сегодня день рождения и это очень круто\n ㅤㅤㅤㅤㅤㅤㅤㅤㅤзнаешь что еще круто?"
+  textElement.innerText = "у тебя сегодня день рождения и это очень круто\n ㅤㅤㅤㅤㅤㅤㅤзнаешь что еще круто?"
 }
     function createDecoration() {
       const decoration = document.createElement('div');
@@ -75,5 +75,5 @@ function changeContent2() {
       setTimeout(() => {
         fadeInBackground();
         startFallingDecorations(); // Start falling decorations after background expands
-      }, 15000); // Adjust delay after showing IP
+      }, 14500); // Adjust delay after showing IP
     }
