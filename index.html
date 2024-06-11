@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bont</title>
+  <title>Fading Text and Image</title>
   <style>
     body {
       font-family: sans-serif;
@@ -42,15 +42,55 @@
     }
 
     #ip-address {
-      color: white;
+      color: black;
       z-index: 2;
     }
 
     #startButton {
-      padding: 10px 20px;
+      padding: 20px;
       font-size: 1em;
-      margin-top: 20px;
       z-index: 2;
+      background: red;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+
+    #startButton::before,
+    #startButton::after {
+      content: '';
+      position: absolute;
+      background: gold;
+    }
+
+    #startButton::before {
+      width: 100%;
+      height: 10px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    #startButton::after {
+      height: 100%;
+      width: 10px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #startButton::after {
+      content: '';
+      position: absolute;
+      background: gold;
+      width: 20px;
+      height: 20px;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
     }
 
     .decoration {
@@ -74,12 +114,12 @@
 </head>
 
 <body>
-  <div id="text">Привет бот</div>
-  <span id="ip-address" align="center"></span>
+  <div id="text">a</div>
+  <span id="ip-address">Loading...</span>
   <div id="background"></div>
-  <button id="startButton" onclick="startSequence()">Старт</button>
+  <button id="startButton" onclick="startSequence()">Start</button>
   <audio id="soundEffect" src="https://cdn.discordapp.com/attachments/770232549553078273/1249701014559395872/vine-boom.mp3?ex=66684244&is=6666f0c4&hm=640cfd84e509eb502b7dbf7bf0db1e835a7bd9f4c9ebd936d3b71019864ada4f&"></audio>
-<script src="script.js"></script>
+  <script src="script.js"> </script>
 </body>
 
 </html>
