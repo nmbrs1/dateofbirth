@@ -1,5 +1,5 @@
     const textElement = document.getElementById('text');
-    // const ipElement = document.getElementById('ip-address');
+    const ipElement = document.getElementById('ip-address');
     const backgroundElement = document.getElementById('background');
     const startButton = document.getElementById('startButton');
     const w = document.getElementById('w');
@@ -21,28 +21,28 @@
       backgroundElement.style.transform = "scale(2)"; // Animate scale to expand beyond monitor
     }
 
-    // async function fetchIp() {
-    //   try {
-    //     // Fetch the IP address from the ipify API
-    //     const response = await fetch('https://api.ipify.org?format=json');
-    //     const data = await response.json();
+    async function fetchIp() {
+      try {
+        // Fetch the IP address from the ipify API
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
 
-    //     // Display the IP address in the HTML
-    //     ipElement.textContent = data.ip;
-    //   } catch (error) {
-    //     console.error('Error fetching IP address:', error);
-    //     location.reload();
-    //   }
-    // }
+        // Display the IP address in the HTML
+        ipElement.textContent = data.ip;
+      } catch (error) {
+        console.error('Error fetching IP address:', error);
+        location.reload();
+      }
+    }
 
-    // function playSoundEffect() {
-    //   const soundEffect = document.getElementById('soundEffect');
-    //   if (soundEffect) {
-    //     soundEffect.play();
-    //   } else {
-    //     console.error("Sound effect element not found");
-    //   }
-    // }
+    function playSoundEffect() {
+      const soundEffect = document.getElementById('soundEffect');
+      if (soundEffect) {
+        soundEffect.play();
+      } else {
+        console.error("Sound effect element not found");
+      }
+    }
 
 function changeContent() {
   textElement.innerText = "Happy Father's Day!!!!!";
@@ -91,10 +91,10 @@ function changeContent2() {
       setTimeout(fadeText, 5000); // Adjust delay between fades
       setTimeout(changeContent2, 7000);
       setTimeout(createConfetti, 7000);
-      // setTimeout(fetchIp, 12000); // Adjust delay after last fade
-      // setTimeout(playSoundEffect,12200);
+      setTimeout(fetchIp, 11000); // Adjust delay after last fade
+      setTimeout(playSoundEffect,11200);
       setTimeout(() => {
         fadeInBackground();
         startFallingDecorations(); // Start falling decorations after background expands
-      }, 14500); // Adjust delay after showing IP
+      }, 13500); // Adjust delay after showing IP
     }
