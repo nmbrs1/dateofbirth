@@ -44,8 +44,8 @@
 /*     #ip-address {
       color: white;
       z-index: 2;
-    }
- */
+    } */
+
     #startButton {
       width: 150px;
       height: 150px;
@@ -133,15 +133,29 @@
       z-index: 1;
     }
 
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      opacity: 0.8;
+      animation: confetti-fall 2s linear infinite;
+      z-index: 1;
+    }
+
     @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+
+    @keyframes confetti-fall {
       to {
         transform: translateY(100vh);
       }
     }
     #w {
       color: white;
-      position: absolute;
-      bottom: 0;
       z-index: 2;
     }
   </style>
