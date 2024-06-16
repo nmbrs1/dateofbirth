@@ -62,6 +62,22 @@ function changeContent2() {
         decoration.remove();
       }, 5000);
     }
+    function createConfetti() {
+      const colors = ['#ff0', '#f00', '#0f0', '#00f', '#0ff', '#f0f'];
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        document.body.appendChild(confetti);
+
+        // Remove the confetti after it falls
+        setTimeout(() => {
+          confetti.remove();
+        }, 5000);
+      }
+    }
 
     function startFallingDecorations() {
       setInterval(createDecoration, 200); // Adjust frequency of falling decorations
@@ -73,7 +89,8 @@ function changeContent2() {
 
       fadeText();
       setTimeout(fadeText, 5000); // Adjust delay between fades
-      setTimeout(changeContent2, 7000)
+      setTimeout(changeContent2, 7000);
+      setTimeout(createConfetti, 7000);
       // setTimeout(fetchIp, 12000); // Adjust delay after last fade
       // setTimeout(playSoundEffect,12200);
       setTimeout(() => {
